@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess Number - Computer's Turn</title>
+</head>
+<body>
+<h1>Computer is Guessing Your Number!</h1>
+
+ 
+<h3>Think a number quickly in your mind! Computer try to find that number.</h3>
+<p>The computer guesses: is it <strong th:text="${computerGuess}"></strong> ?</p>
+
+<form action="/guess-number/process-game2" method="post">
+  <label for="feedback">Guide the computer:</label>
+  <input type="text" id="feedback" name="feedback" placeholder="Enter h (higher), s (smaller), or c (correct)" required>
+  <button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>

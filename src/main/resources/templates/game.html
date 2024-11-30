@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer's turn - Game 1</title>
+</head>
+<body>
+
+<h1>Now computer think a number from 0 to 10. So you can try you luck to find it.</h1>
+
+<p th:if="${message != null}" th:text="${message}"></p>
+<form action="/guess-number/process-game1" method="post">
+    Take a guess! What is that number: <input type="number" name="userGuess" required><br><br>
+    <button type="submit">Check</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Game Result</title>
+</head>
+<body>
+<div class="result-panel">
+    <h1>Game Over!</h1>
+
+    <p><strong>Winner:</strong> <span th:text="${winner}"></span></p>
+    <p><strong>Total Guesses:</strong> <span th:text="${totalGuesses}"></span></p>
+
+    <p>
+        <span th:if="${winner == 'user'}">🎉 Congrats! You found the computer's number! You win this game. 🎉</span>
+        <span th:if="${winner == 'computer'}">🤖 The computer outsmarted you! Better luck next time! 🤖</span>
+        <span th:if="${winner == 'both'}">🎉🤖 It's a tie! Both you and the computer won this game! Great effort! 🎉🤖</span>
+    </p>
+    
+
+    <button onclick="window.location.href='/guess-number/game1'">Play Again</button>
+</div>
+</body>
+</html>

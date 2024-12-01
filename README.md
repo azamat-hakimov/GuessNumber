@@ -44,7 +44,3 @@ The HTML code used in this project is very basic and simple. As I am still learn
 
 1. Download the project files.
 2. Run the project with Maven.
-
-
-
-
